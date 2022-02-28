@@ -11,6 +11,9 @@ app.get('/', (req, res) => {
     res.send('Hola mi server en express');
 });
 
+require('./auth/')
+
+
 routes(app);
 app.use(logErrors);
 app.use(boomErrorHandler);

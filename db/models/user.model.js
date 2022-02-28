@@ -28,13 +28,13 @@ const UserSchema = {
 
 class User extends Model{
     
-    // static associate(models){
-    //     this.hasMany(models.Order, {
-    //         as: 'orders',
-    //         foreignKey: 'userId'
-    //     });
+    static associate(models){
+        this.hasMany(models.Proyect, {
+            as: 'proyects',
+            foreignKey: 'userId'
+        });
 
-    // }
+    }
 
     static config(sequelize){
         return {
